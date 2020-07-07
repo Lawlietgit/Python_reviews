@@ -71,7 +71,22 @@ class Users:
     # N --> infinity
     # O(a*N^c + b) a, b, c are constants --> O(N^c)
 
-
+# dictionary/sets
+# visit element time O(1)
+# a = [1,2,3, 3,3,3,3,3], a[0]
+# check if 3 is in a:
+# a_set = {1,2,3}
+# check if 3 is in a set:
+# in a set, the elements have to be unique
+# a set can be used as the key set for a dictionary
+# a_dic = {0:2, 1:2} k:v a_dic[0] -->2
+"""
+print(3 in a) --> True O(N)
+print(3 in a_set) --> True O(1)
+a_lis.append(), .remove(), .pop(), .insert()
+a_set.add(), .remove()
+a_dic[new_key] = new_value, a_dic.remove(key)
+"""
 
 
 
