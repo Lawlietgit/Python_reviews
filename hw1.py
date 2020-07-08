@@ -22,28 +22,59 @@ syntax hint:
       dic[1] = dic[1] + 5
       --> dic = {1:5}
 """
+#HW1:
+def counter(l):
+    dic={}
+
+    for c in l:
+        
+        if c in dic:
+            print("Yes")
+            dic[c]=dic[c]+1
+        else:
+            print("No") 
+            dic[c]=1
+
+    print(dic)
 
 
+#HW2:
+class RangeSum:
+    def __init__(self, input_list=[]):
+        self.input_list = input_list
 
-"""
-hw2:
-    class RangeSum:
-        def __init___(self, input_list):
-            pass
+    def update(self, index, new_value):
+        
+        self.input_list[index]=new_value
+        print(self.input_list)
 
-        def update(self, index, new_value):
-            pass
+    def rsum(self, start, end):
+        s=self.input_list[start]
+        f=self.input_list[end]
+        total1=0
+        total2=0
+        for a in range(start,end+1,1):
+            total1=total1+self.input_list[a]
+        
+        if start>0:
+            for b in range(start-1):
+                total2=total2+self.input_list[b]
+        print(total1-total2)
 
-        def rsum(self, start, end):
-            pass
+counter([1,2,3,1,2,3])
 
 rangesum = RangeSum([1,2,3,4])
 rangesum.update(0,5)
---> [5,2,3,4]
-rangesum.rsum(0,1) --> 7
-rangesum.rsum(1,3) --> 9
-rangesum.update()
+rangesum.update(1,1)
+rangesum.rsum(1,2)
 
+
+
+#[5,2,3,4]
+#rangesum.rsum(0,1) --> 7
+#rangesum.rsum(1,3) --> 9
+#rangesum.update()
+"""
 extra req:
     think of a senario, when you do lots lots of rsums,
     how would you improve your RangeSum object?
