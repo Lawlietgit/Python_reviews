@@ -53,22 +53,22 @@ class RangeSum:
         f=self.input_list[end]
         total1=0
         total2=0
-        for a in range(start,end+1,1):
+        for a in range(end+1):
             total1=total1+self.input_list[a]
+            print(total1)
+        print("---------------")
         
         if start>0:
-            for b in range(start-1):
+            for b in range(start):
                 total2=total2+self.input_list[b]
+                print(total2)
+        print("--------------")
         print(total1-total2)
 
-counter([1,2,3,1,2,3])
+#counter([22,5,7,8,7,9,5,4,78,95,5,25,4])
 
-rangesum = RangeSum([1,2,3,4])
-rangesum.update(0,5)
-rangesum.update(1,1)
-rangesum.rsum(1,2)
-
-
+rangesum = RangeSum([245,12,5,8,14,74,554])
+rangesum.rsum(5,6)
 
 #[5,2,3,4]
 #rangesum.rsum(0,1) --> 7
@@ -79,7 +79,7 @@ extra req:
     think of a senario, when you do lots lots of rsums,
     how would you improve your RangeSum object?
 hint:
-    any rangesum is a subtraction of 2 sums
+any rangesum is a subtraction of 2 sums
     sum(2) - sum(0) ---> rsum(1,2)
     access these sums efficiently?
 """
